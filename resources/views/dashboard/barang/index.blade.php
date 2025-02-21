@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 @include('layouts.header')
-<title>Dashboard Barang</title>
+<title>Dashboard</title>
 
-<body class="bg-gray-200">
+<body class="bg-hitam">
     {{-- sidebar --}}
     <div class="min-h-screen flex">
         @include('layouts.sidebar')
 
         {{-- table content --}}
-        <div class="flex-1 p-8 space-y-6">
+        <div class="flex-1 p-8 space-y-6 sm:ml-64">
             <div class="flex justify-between items-center">
-                <h2 class="text-xl font-semibold text-black">Daftar Barang</h2>
-                <a href="{{ url('/dashboard/barang/create') }}" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition duration-300 flex items-center space-x-2">
+                <h2 class="text-xl font-semibold text-putih">Daftar Barang</h2>
+                <a href="{{ url('/dashboard/barang/create') }}" class="px-6 py-3 bg-biru text-white font-semibold rounded-lg flex items-center space-x-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
                     </svg>
@@ -21,8 +21,8 @@
             </div>
         
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                <table class="w-full text-sm text-left text-gray-600 dark:text-gray-300">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-800 dark:text-gray-400">
+                <table class="w-full text-sm text-left text-putih">
+                    <thead class="text-xs text-putih uppercase bg-hitammuda">
                         <tr>
                             <th scope="col" class="px-6 py-3">ID Barang</th>
                             <th scope="col" class="px-6 py-3">Kategori</th>
@@ -34,13 +34,13 @@
                         </tr>
                     </thead>
                     
-                    <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                    <tbody class="bg-hitamsoft text-putih">
                         @foreach($barangs as $barang)
-                        <tr class="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-900 dark:even:bg-gray-800 border-b dark:border-gray-700">
-                            <td class="px-6 py-4 font-medium text-gray-900 dark:text-white">{{ $barang->id_barang }}</td>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-putih">{{ $barang->id_barang }}</td>
                             <td class="px-6 py-4">{{ $barang->kategori }}</td>
                             <td class="px-6 py-4">{{ $barang->nama_barang }}</td>
-                            <td class="px-6 py-4">{{ number_format($barang->harga, 2) }}</td>
+                            <td class="px-6 py-4">{{ 'Rp ' . number_format($barang->harga, 2, ',', '.') }}</td>
                             <td class="px-6 py-4">{{ $barang->stok }}</td>
                             <td class="px-6 py-4">{{ $barang->supplier }}</td>
                             
@@ -51,15 +51,15 @@
                                     </svg>
                                 </a>
                                 
-                                <form action="{{ url('/dashboard/barang/'.$barang->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus barang ini?');">
+                                <form id="delete-form-{{ $barang->id }}" action="{{ url('/dashboard/barang/'.$barang->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="text-red-600 hover:text-red-900 p-2 rounded-md hover:bg-red-100 transition">
+                                    <button type="button" onclick="confirmDelete({{ $barang->id }})" class="text-red-600 hover:text-red-900 p-2 rounded-md hover:bg-red-100 transition">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
                                         </svg>
                                     </button>
-                                </form>
+                                </form>                                
                             </td>
                         </tr>
                         @endforeach
@@ -69,5 +69,22 @@
         </div>              
     </div>
 </body>
-
+<script>
+    function confirmDelete(barangId) {
+        Swal.fire({
+            title: 'Apakah Anda yakin?',
+            text: "Apakah Anda ingin menghapus data ini?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Ya, Hapus!',
+            cancelButtonText: 'Tidak'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById('delete-form-' + barangId).submit();
+            }
+        });
+    }
+</script>
 </html>

@@ -14,6 +14,16 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                biru: '#4163CF',
+                putih: '#F4FDF7',
+                birumuda: '#708DEF',
+                hitammuda: '#272638',
+                hitam: '#1E1C29',
+                hitamsoft: '#35374E',
+                unggumuda: '#645CBD',
+                orenmuda: '#F1ABA8',
+              },
         },
     },
     plugins: [],

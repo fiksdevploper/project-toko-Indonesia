@@ -3,12 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\Barang;
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Routing\Controller;
 
 class BarangController extends Controller
 {
+    public function chart()
+    {
+        $jumlahBarang = Barang::count();
+        $jumlahSupplier = Supplier::count();
+        $barangs = Barang::all();
+        return view('dashboard.chart.barang', compact('jumlahBarang', 'jumlahSupplier', 'barangs'));
+    }
+    
     /**
      * Display a listing of the resource.
      */

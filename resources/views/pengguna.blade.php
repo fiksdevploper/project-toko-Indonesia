@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 @include('layouts.header')
+<title>Pengguna</title>
 
-<body class="bg-gray-200">
-    <div class="container mx-auto p-4">
-      <div class="flex items-center justify-between">
-        <h1 class="text-2xl font-bold text-black mb-4">Cari Barang</h1>
-        <form action="{{ route('pengguna') }}" method="GET" class="mb-4">
-          <input type="text" id="search" name="search" placeholder="Cari Barang..."
-          class="px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-white"
-          value="{{ request('search') }}">
-          <button type="submit" class="px-4 items-center py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">            
-            Cari
-          </button>
-        </form>
-      </div>
+<body class="bg-hitam">
+    <div class="p-4">
+        <nav class="bg-biru rounded-xl">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <div class="flex items-center">
+                        <span class="font-semibold text-putih text-2xl">☀️Sunshine</span>
+                    </div>
 
-      <div class="flex-1 p-8 space-y-6">
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-600 dark:text-gray-300">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-800 dark:text-gray-400">
-                    <tr>
-                      <th scope="col" class="px-6 py-3 text-center">ID Barang</th>
-                      <th scope="col" class="px-6 py-3 text-center">Kategori</th>
-                      <th scope="col" class="px-6 py-3 text-center">Nama Barang</th>
-                      <th scope="col" class="px-6 py-3 text-center">Harga</th>
-                      <th scope="col" class="px-6 py-3 text-center">Stok</th>
-                      <th scope="col" class="px-6 py-3 text-center">Supplier</th>
-                    </tr>
-                </thead>
-                
-                <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
-                    @foreach($barangs as $barang)
-                    <tr class="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-900 dark:even:bg-gray-800 border-b dark:border-gray-700">
-                      <td class="px-6 py-4 text-center font-medium text-gray-900 dark:text-white">{{ $barang->id_barang }}</td>
-                      <td class="px-6 py-4 text-center">{{ $barang->kategori }}</td>
-                      <td class="px-6 py-4 text-center">{{ $barang->nama_barang }}</td>
-                      <td class="px-6 py-4 text-center">{{ number_format($barang->harga, 2) }}</td>
-                      <td class="px-6 py-4 text-center">{{ $barang->stok }}</td>
-                      <td class="px-6 py-4 text-center">{{ $barang->supplier }}</td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-      </div> 
+                    <div class="flex items-center space-x-3">
+                        <form action="{{ route('pengguna') }}" method="GET"
+                            class="relative text-putih flex items-center">
+                            <div class="absolute left-3">
+                                <svg class="w-5 h-5 text-putih" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11 19a8 8 0 100-16 8 8 0 000 16zM21 21l-4.35-4.35" />
+                                </svg>
+                            </div>
+                            <input type="text" name="search" placeholder="Cari Barang..."
+                                class="px-4 py-2 pl-10 bg-birumuda text-putih border rounded-full placeholder:text-putih"
+                                value="{{ request('search') }}" />
+                        </form>
+
+                        <a href="{{ route('admin.login') }}"
+                            class="py-2 px-4 gap-1 flex items-center text-putih font-semibold bg-birumuda rounded-full transition duration-200 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-6 text-putih">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                            </svg>
+                            <span class="text-putih">Masuk</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 mt-8">
+        <h1 class="text-2xl font-bold text-putih mb-4">Daftar Barang</h1>
+        <!-- Konten lainnya -->
+        @include('layouts.tablebarang')
     </div>
 </body>
+
 </html>

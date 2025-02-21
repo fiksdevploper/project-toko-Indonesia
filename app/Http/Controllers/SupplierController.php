@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Barang;
 use App\Models\Supplier;
 use Illuminate\Http\Request;
 
 class SupplierController extends Controller
 {
+    public function chart()
+    {
+        $jumlahBarang = Barang::count();
+        $jumlahSupplier = Supplier::count();
+        $suppliers = Supplier::all();
+        return view('dashboard.chart.suplier', compact('jumlahBarang', 'jumlahSupplier', 'suppliers'));
+    }
     /**
      * Display a listing of the resource.
      */

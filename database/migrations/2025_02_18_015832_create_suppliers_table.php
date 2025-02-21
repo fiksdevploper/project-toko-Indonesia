@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nama_suplier');
             $table->string('alamat');
             $table->string('kota');
-            $table->integer('no_telepon');
+            $table->string('no_telepon');
             $table->timestamps();
         });
     }
