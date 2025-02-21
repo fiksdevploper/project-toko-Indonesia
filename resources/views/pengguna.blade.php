@@ -23,12 +23,12 @@
                                 </svg>
                             </div>
                             <input type="text" name="search" placeholder="Cari Barang..."
-                                class="px-4 py-2 pl-10 bg-birumuda text-putih border rounded-full placeholder:text-putih"
+                                class="px-4 py-2 pl-10 bg-birumuda text-putih border rounded-2xl placeholder:text-putih"
                                 value="{{ request('search') }}" />
                         </form>
 
                         <a href="{{ route('admin.login') }}"
-                            class="py-2 px-4 gap-1 flex items-center text-putih font-semibold bg-birumuda rounded-full transition duration-200 group">
+                            class="py-2 px-4 gap-1 flex items-center text-putih font-semibold bg-birumuda rounded-2xl group">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="size-6 text-putih">
                                 <path stroke-linecap="round" stroke-linejoin="round"
