@@ -1,6 +1,6 @@
 <div class="relative overflow-x-auto sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-600">
-        <thead class="text-xs text-putih uppercase bg-hitammuda">
+    <table class="w-full text-sm text-left text-putih">
+        <thead class="text-xs uppercase bg-hitammuda">
             <tr>
                 <th scope="col" class="px-6 py-3 text-center">ID Barang</th>
                 <th scope="col" class="px-6 py-3 text-center">Kategori</th>
@@ -13,8 +13,8 @@
 
         <tbody class="bg-hitamsoft">
             @foreach ($barangs as $barang)
-                <tr class="text-putih">
-                    <td class="px-6 py-4 text-center font-medium text-gray-900 dark:text-white">
+                <tr>
+                    <td class="px-6 py-4 text-center font-semibold text-white">
                         {{ $barang->id_barang }}</td>
                     <td class="px-6 py-4 text-center">{{ $barang->kategori }}</td>
                     <td class="px-6 py-4 text-center">{{ $barang->nama_barang }}</td>

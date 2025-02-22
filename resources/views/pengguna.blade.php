@@ -23,7 +23,7 @@
                                 </svg>
                             </div>
                             <input type="text" name="search" placeholder="Cari Barang..."
-                                class="px-4 py-2 pl-10 bg-birumuda text-putih border rounded-2xl placeholder:text-putih"
+                                class="px-4 py-2 pl-10 bg-birumuda text-putih rounded-2xl placeholder:text-putih"
                                 value="{{ request('search') }}" />
                         </form>
 

@@ -10,7 +10,7 @@
         {{-- table content --}}
         <div class="flex-1 p-8 space-y-6 sm:ml-64">
             <div class="flex justify-between items-center">
-                <h2 class="text-xl font-semibold text-putih">Daftar Supplier</h2>
+                <h2 class="text-xl font-semibold text-putih font-display">Daftar Supplier</h2>
                 <a href="{{ route('suppliers.create') }}"
                     class="px-6 py-3 bg-biru text-white font-semibold rounded-lg shadow-md transition duration-300 flex items-center space-x-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
@@ -22,7 +22,7 @@
             </div>
         
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <table class="w-full text-xs text-left rtl:text-right text-putih">
                     <thead class="text-xs text-putih uppercase bg-hitammuda">
                         <tr>
                             <th scope="col" class="px-6 py-3">ID Supplier</th>

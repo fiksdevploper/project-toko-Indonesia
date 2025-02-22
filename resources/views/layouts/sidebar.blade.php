@@ -1,7 +1,7 @@
 <div class="p-2">
-    <div class="bg-biru fixed text-white w-64 px-4 py-6 z-30 rounded-lg h-screen flex flex-col justify-between">
+    <div class="bg-biru fixed text-white w-64 px-4 py-6 z-30 rounded-t-2xl h-screen flex flex-col justify-between">
         <div>
-            <h1 class="text-2xl font-bold mb-4 text-center">☀️Sunshine</h1>
+            <h1 class="text-2xl font-semibold mb-4 text-center">☀️Sunshine</h1>
             <hr class="mb-4">
             <nav>
                 <ul>
@@ -60,7 +60,14 @@
                 class="flex items-center space-x-2 w-full p-2 bg-birumuda rounded-lg border focus:outline-none">
                 <img src="{{ asset('image/foto profil.jpeg') }}" alt="Admin Profile" class="w-10 h-10 rounded-full">
                 <div class="flex flex-col items-start">
-                    <span class="font-semibold text-lg">masadmin</span>
+                    <div class="flex flex-row gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-blue-200">
+                            <path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                        </svg>                          
+                        <span class="font-semibold text-lg">
+                            masadmin
+                        </span>
+                    </div>
                     <span class="text-sm text-gray-200">masadmin@gmail.com</span>
                 </div>
             </button>

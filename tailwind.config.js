@@ -12,7 +12,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+                display: ['Clash Display', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 biru: '#4163CF',

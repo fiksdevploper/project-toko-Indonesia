@@ -6,7 +6,7 @@
 <body class="bg-hitam">
     @include('layouts.sidebar')
     <div class="flex-1 p-8 space-y-6 sm:ml-64">
-        <h1 class="text-2xl text-putih font-bold mb-4 text-start">To-Do List & Kalender</h1>
+        <h1 class="text-2xl text-putih font-semibold mb-4 text-start font-display">To-Do List & Kalender 🔥</h1>
 
         <!-- Grid untuk To-Do List dan Kalender -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -19,7 +19,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg> 
-                        <span class="absolute top-0 right-full mr-2 bg-hitamsoft text-white text-sm px-4 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="absolute top-0 right-full mr-2 bg-hitamsoft text-white text-sm px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             Tambah Task
                         </span>
                     </button>
@@ -51,13 +51,14 @@
 
                 <!-- Tanggal -->
                 <div id="calendarDays" class="grid grid-cols-7 gap-2"></div>
+            </div>
 
-                <!-- Form Tambah Jadwal -->
+            <div class="bg-hitammuda w-full p-6 rounded-2xl min-h-[300px]">
                 <div class="mt-6">
                     <div class="flex items-center justify-between mt-3 mb-2">
-                        <h3 class="text-lg font-semibold text-putih mb-2">Tambah Jadwal</h3>
+                        <h3 class="text-xl font-semibold text-putih mb-2">Tambah Jadwal</h3>
                         <button onclick="addSchedule()" class="px-4 py-2 bg-biru text-white rounded-lg relative group">
-                            <span class="absolute top-0 right-full mr-2 bg-hitamsoft text-white text-sm px-4 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="absolute top-0 right-full mr-2 bg-hitamsoft text-white text-sm px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 Tambah Jadwal
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -70,8 +71,7 @@
                         <input type="text" id="scheduleInput" placeholder="Deskripsi jadwal" class="flex-1 p-2 bg-hitamsoft text-white rounded-lg">
                     </div>
                 </div>                
-
-                <!-- Daftar Jadwal -->
+                
                 <div id="scheduleList" class="mt-4 space-y-2 text-putih overflow-auto max-h-[200px]"></div>
             </div>
         </div>

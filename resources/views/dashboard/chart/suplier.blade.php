@@ -10,7 +10,7 @@
 
         <!-- Konten Utama -->
         <main class="flex-1 p-8 sm:ml-64">
-            <h2 class="text-2xl text-putih font-bold mb-4">Statistik Barang & Supplier</h2>
+            <h2 class="text-2xl text-putih font-semibold mb-4 font-display">Statistik Barang & Supplier</h2>
 
             <div class="flex flex-row justify-between">
                 <!-- Doughnut Chart -->
@@ -27,13 +27,13 @@
             </div>
 
             <div class="mb-4">
-                <div class="flex items-center justify-between">
-                    <h2 class="text-2xl text-putih font-bold mb-4 mt-8">Table Barang & Supplier</h2>
+                <div class="flex flex-row items-center justify-between">
+                    <h2 class="text-2xl text-putih font-semibold font-clash mb-4 mt-8">Table Barang & Supplier</h2>
                     <nav class="flex flex-row text-putih">
                         <a href="{{ route('chart.barang') }}"
-                            class="text-center font-semibold text-lg rounded-full p-3 hover:underline mb-4 py-2 transition-all">Barang</a>
+                            class="text-center text-lg rounded-full p-3 hover:underline mb-4 py-2 transition-all">Barang</a>
                         <a href="{{ route('chart.suplier') }}"
-                            class="text-center font-semibold text-lg rounded-full p-3 hover:underline mb-4 py-2 transition-all">Suplier</a>
+                            class="text-center text-lg rounded-full p-3 hover:underline mb-4 py-2 transition-all">Suplier</a>
                     </nav>
                 </div>
 
