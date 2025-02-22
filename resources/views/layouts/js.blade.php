@@ -194,7 +194,7 @@
             const date = new Date(year, month, day);
             const isToday = date.toDateString() === new Date().toDateString();
             calendarDays.innerHTML += `
-        <div class="p-2 text-center ${isToday ? "bg-blue-500 text-white rounded-full" : "text-gray-300"}">
+        <div class="p-2 text-center ${isToday ? "bg-biru text-putih rounded-2xl font-semibold" : "text-gray-300 hover:bg-hitamsoft hover:rounded-2xl"}">
             ${day}
         </div>
         `;
@@ -210,4 +210,32 @@
         currentDate.setMonth(currentDate.getMonth() + 1);
         renderCalendar();
     }
+
+    function updateClock() {
+        const now = new Date();
+
+        // Ambil jam dan menit
+        let hours = now.getHours().toString().padStart(2, '0');
+        let minutes = now.getMinutes().toString().padStart(2, '0');
+
+        // Ambil tanggal, bulan, dan tahun
+        let day = now.getDate().toString().padStart(2, '0');
+        let monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September",
+            "Oktober", "November", "Desember"
+        ];
+        let month = monthNames[now.getMonth()];
+        let year = now.getFullYear();
+
+        // Update jam
+        document.getElementById("digitalClock").textContent = `${hours}:${minutes}`;
+
+        // Update tanggal
+        document.getElementById("dateDisplay").textContent = `${day} ${month} ${year}`;
+    }
+
+    // Update jam dan tanggal setiap detik
+    setInterval(updateClock, 1000);
+
+    // Panggil fungsi pertama kali agar tidak delay
+    updateClock();
 </script>

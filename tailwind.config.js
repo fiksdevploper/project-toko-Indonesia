@@ -24,8 +24,11 @@ export default {
                 hitamsoft: '#35374E',
                 unggumuda: '#645CBD',
                 orenmuda: '#F1ABA8',
-              },
+            },
+            
         },
     },
-    plugins: [],
+    plugins: [
+        require('tailwind-scrollbar'),
+    ],
 };
