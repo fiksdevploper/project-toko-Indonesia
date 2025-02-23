@@ -10,12 +10,10 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             {{-- todolist --}}
-            <div class="bg-hitammuda w-full p-6 rounded-2xl min-h-[300px]">
-                <h2 class="text-xl font-semibold text-putih mb-4">Todolist</h2>
-                <div class="flex flex-wrap gap-3 mb-4">
-                    <input type="text" id="taskInput" placeholder="Tambah task baru..."
-                        class="flex-1 p-2 bg-hitamsoft text-white rounded-lg">
-                    <button onclick="addTask()" class="px-4 py-2 bg-biru text-white rounded-lg relative group">
+            <div class="bg-hitammuda border-2 border-hitamsoft w-full p-6 rounded-3xl min-h-[300px]">
+                <div class="flex items-center justify-between mt-3 mb-2">
+                    <h2 class="text-xl font-semibold text-putih mb-4">To-do list</h2>
+                    <button onclick="addTask()" class="px-4 py-2 bg-hitamsoft hover:bg-biru text-white rounded-lg relative transition-opacity duration-300 group">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -27,11 +25,15 @@
                         </span>
                     </button>
                 </div>
+                <div class="flex flex-wrap gap-3 mb-4">
+                    <input type="text" id="taskInput" placeholder="Tambah task baru..."
+                    class="flex-1 p-2 bg-hitamsoft text-white rounded-lg">
+                </div>
                 <ul id="taskList" class="space-y-2 text-putih overflow-auto max-h-[200px] scrollbar-thin scrollbar-thumb-hitamsoft scrollbar-track-transparent scrollbar-rounded-full"></ul>
             </div>
 
             {{-- calender --}}
-            <div class="bg-hitammuda w-full p-6 rounded-2xl min-h-[300px]">
+            <div class="bg-hitammuda border-2 border-hitamsoft w-full p-6 rounded-3xl min-h-[300px]">
                 <h2 class="text-xl font-semibold text-putih mb-4">Kalender</h2>
 
                 <!-- Header Kalender -->
@@ -43,13 +45,13 @@
 
                 <!-- Grid Hari -->
                 <div class="grid grid-cols-7 gap-2 text-center text-gray-400 font-medium mb-2">
+                    <div class="text-red-500">Min</div>
                     <div>Sen</div>
                     <div>Sel</div>
                     <div>Rab</div>
                     <div>Kam</div>
                     <div>Jum</div>
                     <div>Sab</div>
-                    <div>Min</div>
                 </div>
 
                 <!-- Tanggal -->
@@ -57,11 +59,11 @@
             </div>
 
             {{-- list jadwal --}}
-            <div class="bg-hitammuda w-full p-6 rounded-2xl min-h-[300px]">
+            <div class="bg-hitammuda border-2 border-hitamsoft w-full p-6 rounded-3xl min-h-[300px]">
                 <div class="mt-6">
                     <div class="flex items-center justify-between mt-3 mb-2">
                         <h3 class="text-xl font-semibold text-putih mb-2">Tambah Jadwal</h3>
-                        <button onclick="addSchedule()" class="px-4 py-2 bg-biru text-white rounded-lg relative group">
+                        <button onclick="addSchedule()" class="px-4 py-2 bg-hitamsoft hover:bg-biru text-white rounded-lg relative transition-opacity duration-300 group">
                             <span
                                 class="absolute top-0 right-full mr-2 bg-hitamsoft text-white text-sm px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 Tambah Jadwal
@@ -84,10 +86,10 @@
             </div>
 
             {{-- Jam Digital --}}
-            <div class="bg-hitammuda w-full p-6 rounded-2xl min-h-[150px] flex flex-col justify-center items-start space-y-3">
+            <div class="bg-hitammuda border-2 border-hitamsoft w-full p-6 rounded-3xl min-h-[150px] flex flex-col justify-center items-start space-y-3">
                 <h3 class="text-lg md:text-xl font-semibold text-putih">Waktu Sekarang</h3>
                 <div class="flex flex-col w-full">
-                    <span id="digitalClock" class="text-[64px] sm:text-[66px] md:text-[66pxpx] lg:text-[158px] font-bold font-display text-biru leading-none">
+                    <span id="digitalClock" class="text-[60px] sm:text-[66px] md:text-[66pxpx] lg:text-[140px] font-bold font-display text-biru leading-none">
                         00:00
                     </span>
                     <div class="flex flex-wrap items-center gap-2">

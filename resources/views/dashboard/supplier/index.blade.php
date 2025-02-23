@@ -12,7 +12,7 @@
             <div class="flex justify-between items-center">
                 <h2 class="text-xl font-semibold text-putih font-display">Daftar Supplier</h2>
                 <a href="{{ route('suppliers.create') }}"
-                    class="px-6 py-3 bg-biru text-white font-semibold rounded-lg shadow-md transition duration-300 flex items-center space-x-2">
+                    class="px-6 py-3 bg-biru text-white font-semibold rounded-2xl shadow-md transition duration-300 flex items-center space-x-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
@@ -21,7 +21,7 @@
                 </a>
             </div>
         
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div class="relative overflow-x-auto shadow-md rounded-2xl">
                 <table class="w-full text-xs text-left rtl:text-right text-putih">
                     <thead class="text-xs text-putih uppercase bg-hitammuda">
                         <tr>

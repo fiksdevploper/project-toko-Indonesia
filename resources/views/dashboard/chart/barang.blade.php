@@ -10,17 +10,24 @@
 
         <!-- Konten Utama -->
         <main class="flex-1 p-8 sm:ml-64">
+            <div class="flex items-center justify-between mb-[60px]">
+                <h2 class="text-2xl text-putih font-semibold flex items-center">
+                    Selamat Datang, Masadmin🖐️
+                </h2>
+                <img class="w-12 h-12 rounded-full object-cover" src="{{ asset('image/foto profil.jpeg') }}" alt="fotoadmin">
+            </div>            
+
             <h2 class="text-2xl text-putih font-semibold mb-4 font-display">Statistik Barang & Supplier</h2>
 
             <div class="flex flex-row justify-between">
                 <!-- Doughnut Chart -->
-                <div class="w-1/2 max-w-[474px] bg-hitammuda p-6 rounded-lg"> <!-- Menambahkan max-width -->
+                <div class="w-1/2 max-w-[480px] bg-hitammuda border-2 border-hitamsoft p-6 rounded-3xl"> <!-- Menambahkan max-width -->
                     <canvas id="doughnutChart" class="w-full h-full"></canvas>
                     <!-- Menggunakan w-full untuk mengatur lebar secara responsif -->
                 </div>
 
                 <!-- Pie Chart -->
-                <div class="w-1/2 max-w-[474px] bg-hitammuda p-6 rounded-lg"> <!-- Menambahkan max-width -->
+                <div class="w-1/2 max-w-[480px] bg-hitammuda border-2 border-hitamsoft p-6 rounded-3xl"> <!-- Menambahkan max-width -->
                     <canvas id="pieChart" class="w-full h-full"></canvas>
                     <!-- Menggunakan w-full untuk mengatur lebar secara responsif -->
                 </div>

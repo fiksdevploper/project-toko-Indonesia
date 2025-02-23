@@ -12,7 +12,7 @@
         <div class="flex-1 p-8 space-y-6 sm:ml-64">
             <div class="flex justify-between items-center">
                 <h2 class="text-xl font-semibold text-putih font-display">Daftar Barang</h2>
-                <a href="{{ url('/dashboard/barang/create') }}" class="px-6 py-3 bg-biru text-white font-semibold rounded-lg flex items-center space-x-2">
+                <a href="{{ url('/dashboard/barang/create') }}" class="px-6 py-3 bg-biru text-white font-semibold rounded-2xl flex items-center space-x-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
                     </svg>
@@ -20,7 +20,7 @@
                 </a>
             </div>
         
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-2xl">
                 <table class="w-full text-xs text-left text-putih">
                     <thead class="text-xs text-putih uppercase bg-hitammuda">
                         <tr>
