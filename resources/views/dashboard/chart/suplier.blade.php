@@ -26,16 +26,20 @@
                 </div>
             </div>
 
-            <div class="mb-4">
-                <div class="flex flex-row items-center justify-between">
-                    <h2 class="text-2xl text-putih font-semibold font-clash mb-4 mt-8">Table Barang & Supplier</h2>
-                    <nav class="flex flex-row text-putih">
+            <div class="mt-8">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-2xl text-putih font-semibold font-display mb-4">Table Barang & Supplier</h2>
+                    <nav class="flex space-x-4 text-putih mb-4">
                         <a href="{{ route('chart.barang') }}"
-                            class="text-center text-lg rounded-full p-3 hover:underline mb-4 py-2 transition-all">Barang</a>
+                            class="text-center font-normal text-lg rounded-full px-4 py-2 hover:underline transition-all">
+                            Barang
+                        </a>
                         <a href="{{ route('chart.suplier') }}"
-                            class="text-center text-lg rounded-full p-3 hover:underline mb-4 py-2 transition-all">Suplier</a>
+                            class="text-center font-normal text-lg rounded-full px-4 py-2 hover:underline transition-all">
+                            Suplier
+                        </a>
                     </nav>
-                </div>
+                </div>                
 
                 {{-- Menambahkan margin-top untuk jarak antara navbar dan tabel --}}
                 @include('layouts.tablesuplier')

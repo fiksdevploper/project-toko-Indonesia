@@ -1,4 +1,4 @@
-<div class="relative overflow-x-auto sm:rounded-2xl">
+<div class="relative overflow-x-auto rounded-2xl">
     <table class="w-full text-sm text-left text-putih">
         <thead class="text-xs uppercase bg-hitammuda">
             <tr>
