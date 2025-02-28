@@ -78,17 +78,35 @@
             showCancelButton: true,
             confirmButtonText: "Simpan",
             cancelButtonText: "Batal",
+            background: '#1E1C29', 
+            color: '#ffffff', 
+            confirmButtonColor: '#4163CF',
+            cancelButtonColor: '#ff4444', 
+            inputAttributes: {
+                style: 'color: #ffffff; background: #272638; border: 1px solid #1E1C29;'
+            },
             inputValidator: (value) => {
                 if (!value.trim()) {
                     return "Teks tugas tidak boleh kosong!";
                 }
+            },
+            customClass: {
+                popup: 'dark-swal-popup',
             }
         }).then((result) => {
             if (result.isConfirmed) {
                 tasks[index].text = result.value;
                 saveTasks(tasks);
                 renderTasks();
-                Swal.fire("Berhasil!", "Tugas telah diperbarui.", "success");
+                Swal.fire({
+                    title: "Berhasil!",
+                    text: "Tugas telah diperbarui.",
+                    icon: "success",
+                    background: '#1E1C29',
+                    color: '#ffffff',
+                    confirmButtonColor: '#4163CF',
+                    iconColor: '#33cc33'
+                });
             }
         });
     }
@@ -99,17 +117,29 @@
             text: "Tugas ini akan dihapus secara permanen!",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#d33",
-            cancelButtonColor: "#3085d6",
-            confirmButtonText: "Ya, hapus!",
-            cancelButtonText: "Batal"
+            confirmButtonColor: '#ff4444', 
+            cancelButtonColor: '#4163CF', 
+            background: '#1E1C29',
+            color: '#ffffff',
+            iconColor: '#708DEF', 
+            customClass: {
+                popup: 'dark-swal-popup'
+            }
         }).then((result) => {
             if (result.isConfirmed) {
                 const tasks = getTasks();
                 tasks.splice(index, 1);
                 saveTasks(tasks);
                 renderTasks();
-                Swal.fire("Dihapus!", "Tugas telah dihapus.", "success");
+                Swal.fire({
+                    title: "Dihapus!",
+                    text: "Tugas telah dihapus.",
+                    icon: "success",
+                    background: '#1E1C29',
+                    color: '#ffffff',
+                    confirmButtonColor: '#4163CF',
+                    iconColor: '#33cc33'
+                });
             }
         });
     }
@@ -189,12 +219,30 @@
             showCancelButton: true,
             confirmButtonText: "Simpan",
             cancelButtonText: "Batal",
+            background: '#1E1C29',
+            color: '#ffffff', 
+            confirmButtonColor: '#4163CF', 
+            cancelButtonColor: '#ff4444', 
+            inputAttributes: {
+                style: 'color: #ffffff; background: #272638; border: 1px solid #1E1C29;' 
+            },
+            customClass: {
+                popup: 'dark-swal-popup'
+            }
         }).then((result) => {
             if (result.isConfirmed) {
                 schedules[index].text = result.value;
                 saveSchedules(schedules);
                 renderSchedules();
-                Swal.fire("Berhasil!", "Jadwal telah diperbarui.", "success");
+                Swal.fire({
+                    title: "Berhasil!",
+                    text: "Jadwal telah diperbarui.",
+                    icon: "success",
+                    background: '#1E1C29',
+                    color: '#ffffff',
+                    confirmButtonColor: '#4163CF',
+                    iconColor: '#33cc33' 
+                });
             }
         });
     }
@@ -214,13 +262,29 @@
             showCancelButton: true,
             confirmButtonText: "Ya, Hapus!",
             cancelButtonText: "Batal",
+            background: '#1E1C29', 
+            color: '#ffffff', 
+            confirmButtonColor: '#ff4444', 
+            cancelButtonColor: '#4163CF', 
+            iconColor: '#708DEF',
+            customClass: {
+                popup: 'dark-swal-popup'
+            }
         }).then((result) => {
             if (result.isConfirmed) {
                 const schedules = getSchedules();
                 schedules.splice(index, 1);
                 saveSchedules(schedules);
                 renderSchedules();
-                Swal.fire("Terhapus!", "Jadwal telah dihapus.", "success");
+                Swal.fire({
+                    title: "Terhapus!",
+                    text: "Jadwal telah dihapus.",
+                    icon: "success",
+                    background: '#1E1C29',
+                    color: '#ffffff',
+                    confirmButtonColor: '#4163CF',
+                    iconColor: '#33cc33' 
+                });
             }
         });
     }

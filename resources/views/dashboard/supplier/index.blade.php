@@ -74,16 +74,22 @@
     function confirmDeleteSupplier(supplierId) {
         Swal.fire({
             title: 'Apakah Anda yakin?',
-            text: "Apakah Anda ingin menghapus supplier ini?",
+            text: "Apakah Anda ingin menghapus data ini?",
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#3085d6',
+            confirmButtonColor: '#ff4444',   
+            cancelButtonColor: '#4163CF',   
             confirmButtonText: 'Ya, Hapus!',
-            cancelButtonText: 'Tidak'
+            cancelButtonText: 'Tidak',
+            background: '#1E1C29', 
+            color: '#ffffff',              
+            iconColor: '#708DEF',          
+            customClass: {
+                popup: 'dark-swal-popup',
+            }
         }).then((result) => {
             if (result.isConfirmed) {
-                document.getElementById('delete-supplier-form-' + supplierId).submit();
+                document.getElementById('delete-form-' + barangId).submit();
             }
         });
     }
