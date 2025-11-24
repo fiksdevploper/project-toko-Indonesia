@@ -89,7 +89,8 @@
             }
         }).then((result) => {
             if (result.isConfirmed) {
-                document.getElementById('delete-form-' + barangId).submit();
+                // document.getElementById('delete-form-' + barangId).submit();
+                document.getElementById('delete-supplier-form-' + supplierId).submit();
             }
         });
     }
